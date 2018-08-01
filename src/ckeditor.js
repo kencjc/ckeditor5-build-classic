@@ -22,6 +22,11 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Iframe from '@ckeditor/ckeditor5-iframe/src/iframe';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -42,22 +47,29 @@ ClassicEditor.builtinPlugins = [
 	ImageUpload,
 	Link,
 	List,
-	Paragraph
+	Paragraph,
+	Font,
+	FontSize,
+	Highlight,
+	Alignment,
+	Iframe,
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			// 'fontSize',
+			'highlight',
 			'heading',
 			'|',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'imageUpload',
-			'blockQuote',
+			// 'link',
+			// 'bulletedList',
+			// 'numberedList',
+			// 'imageUpload',
+			// 'blockQuote',
 			'undo',
 			'redo'
 		]
